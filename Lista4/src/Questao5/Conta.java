@@ -33,7 +33,6 @@ public class Conta {
     public boolean sacar(float valor) {
         if (valor <= saldo && valor <= limite) {
             saldo -= valor;
-            limite -= valor;
             return true;
         }
         else
