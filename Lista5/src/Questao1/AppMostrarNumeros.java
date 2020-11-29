@@ -8,11 +8,10 @@ public class AppMostrarNumeros {
         int[] pares, impares, valores;
         Scanner dado = new Scanner(System.in);
 
-        byte index = 0;
         valores = new int[10];
         for (byte i = 0; i < 10; i++) {
             System.out.print("Digite o valor " + (i+1) + ": ");
-            valores[index++] = dado.nextInt();
+            valores[i] = dado.nextInt();
         }
         num = new Numeros(valores);
 
