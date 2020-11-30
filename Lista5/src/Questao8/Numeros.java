@@ -7,17 +7,6 @@ public class Numeros {
         this.valores = valores;
     }
 
-    private boolean isPrimo(int num) {
-        if (num <= 0)
-            return false;
-
-        for (byte i=2; i < num; i++)
-            if (num % i == 0)
-                return false;
-
-        return true;
-    }
-
     public int[][] getPrimos() {
         int[][] aux;
         int[][] primos = new int[valores.length][2];
@@ -38,5 +27,16 @@ public class Numeros {
         primos = aux;
 
         return primos;
+    }
+
+    private boolean isPrimo(int num) {
+        if (num <= 0)
+            return false;
+
+        for (byte i=2; i < num; i++)
+            if (num % i == 0)
+                return false;
+
+        return true;
     }
 }

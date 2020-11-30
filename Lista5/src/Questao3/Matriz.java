@@ -11,17 +11,6 @@ public class Matriz {
         this.matriz[index] = linha;
     }
 
-    private int getMaior() {
-        int maior = matriz[0][0];
-
-        for (byte i=0; i < matriz.length; i++)
-            for (byte j=0; j < matriz[i].length; j++)
-                if (matriz[i][j] > maior)
-                    maior = matriz[i][j];
-
-        return maior;
-    }
-
     public int[][] getMatrizR() {
         int[][] matrizR = matriz.clone();
         int maior = getMaior();
@@ -31,5 +20,16 @@ public class Matriz {
                 matrizR[i][j] = matriz[i][j] * maior;
 
         return matriz;
+    }
+
+    private int getMaior() {
+        int maior = matriz[0][0];
+
+        for (byte i=0; i < matriz.length; i++)
+            for (byte j=0; j < matriz[i].length; j++)
+                if (matriz[i][j] > maior)
+                    maior = matriz[i][j];
+
+        return maior;
     }
 }
